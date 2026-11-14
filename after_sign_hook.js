@@ -20,7 +20,10 @@ function writeAppStoreConnectApiKey() {
 
 module.exports = async function (params) {
   // Only notarize the app on Mac OS only.
-  if (process.platform !== 'darwin') {
+  if (
+    process.platform !== 'darwin' ||
+    process.env.SKIP_MACOS_NOTARIZATION === 'true'
+  ) {
     return;
   }
 

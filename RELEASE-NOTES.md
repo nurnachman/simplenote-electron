@@ -1,5 +1,11 @@
 # Changelog
 
+## [v2.28.0]
+
+### Fixes
+
+- Restored macOS 10.15 (Catalina) compatibility for the desktop app.
+
 ## [v2.27.2]
 
 ### Fixes
