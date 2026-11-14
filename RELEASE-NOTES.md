@@ -1,10 +1,10 @@
 # Changelog
 
-## [v2.28.0]
+## [v2.28.1]
 
 ### Fixes
 
-- Restored macOS 10.15 (Catalina) compatibility for the desktop app.
+- Restored macOS 10.15 (Catalina) compatibility by using Electron 32.3.3. This Electron version no longer receives upstream security updates.
 
 ## [v2.27.2]
 

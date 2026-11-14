@@ -10,7 +10,7 @@
   "mac": {
     "icon": "./resources/images/app-icon.icns",
     "category": "public.app-category.social-networking",
-    "minimumSystemVersion": "10.15",
+    "minimumSystemVersion": "11.0",
     "artifactName": "Simplenote-macOS-${version}.${ext}",
     "entitlements": "./resources/macos/entitlements.mac.plist",
     "entitlementsInherit": "./resources/macos/entitlements.mac.inherit.plist",

@@ -19,7 +19,10 @@ jobs:
           cache: npm
       - run: npm ci --legacy-peer-deps
       - run: npm run build
-      - run: npx electron-builder --mac --publish never
+      - run: >
+          npx electron-builder --mac --publish never
+          -c.electronVersion=32.3.3
+          -c.mac.minimumSystemVersion=10.15
         env:
           SKIP_MACOS_NOTARIZATION: 'true'
       - name: Publish release
@@ -30,4 +33,4 @@ jobs:
           release/Simplenote-macOS-*.dmg
           release/Simplenote-macOS-*.zip
           --title "Simplenote $GITHUB_REF_NAME"
-          --notes "Unsigned universal macOS build. Requires macOS 10.15 or later."
+          --notes "Unsigned universal macOS build using Electron 32.3.3 for Catalina compatibility. Requires macOS 10.15 or later. This Electron version no longer receives upstream security updates."
